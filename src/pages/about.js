@@ -12,7 +12,6 @@ const About = () => (
       consectetur. Praesent iaculis euismod nibh, et vulputate sem vestibulum vel. Integer diam
       risus, semper sed lorem ut, interdum iaculis nulla.
     </p>
-    <Link to="/blog/perk-static-sites">Go to blog</Link>
   </div>
 )
 

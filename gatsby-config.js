@@ -13,12 +13,11 @@ module.exports = {
         path: `${__dirname}/src/images`
       }
     },
-
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: `gatsby-source-contentful`,
       options: {
-        name: 'posts',
-        path: `${__dirname}/src/posts/`
+        spaceId: `q23cnljk36db`,
+        accessToken: `2317685212ee4c27abae9c779c4e95399f0239f2afce006c2904f6c7b8efb020`
       }
     },
     {

@@ -10,8 +10,8 @@ const BlogLink = styled(Link)`
   }
 `
 const PostListing = ({ post }) => (
-  <BlogLink to={`/blog/${post.frontmatter.slug}`}>
-    <h2>{post.frontmatter.title}</h2>
+  <BlogLink to={`/blog/${post.slug}`}>
+    <h2>{post.title}</h2>
   </BlogLink>
 )
 

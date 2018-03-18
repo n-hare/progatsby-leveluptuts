@@ -5,13 +5,11 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
   const postTemplate = path.resolve('src/templates/posts.js')
   return graphql(`
     {
-      allMarkdownRemark {
+      allContentfulBlogPost {
         edges {
           node {
             id
-            frontmatter {
-              slug
-            }
+            slug
           }
         }
       }
@@ -21,11 +19,11 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
       return Promise.reject(res.errors)
     }
 
-    res.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    res.data.allContentfulBlogPost.edges.forEach(({ node }) => {
       createPage({
-        path: `/blog/${node.frontmatter.slug}`,
+        path: `/blog/${node.slug}`,
         component: postTemplate,
-        context: { slug: node.frontmatter.slug }
+        context: { slug: node.slug }
       })
     })
   })
